@@ -21,8 +21,8 @@ driver.maximize_window()
 driver.implicitly_wait(5)
 
 # 1: Page by pixel => driver.execute_script("window.scrollBy(0, 500)","")
-driver.execute_script("window.scrollBy(0, 1000)", "")   # From 0 pixel to 500 pixel of the page.
-driver.execute_script("window.scrollBy(1000, 0)", "")   # From 500 pixel to 0 pixel of the page.
+driver.execute_script("window.scrollBy(0, 1000)", "")   # From 0 pixel to 1000 pixel of the page.
+driver.execute_script("window.scrollBy(1000, 0)", "")   # From 1000 pixel to 0 pixel of the page.
 
 # 2: Page till element found => driver.execute_script("arguments[0].scrollIntoView();", Element)
 IRLFlag= driver.find_element_by_xpath("//*[@id='content']/div[2]/div[2]/table[1]/tbody/tr[90]/td[1]/img")

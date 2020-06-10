@@ -1,6 +1,8 @@
+# 15: Working with HTMl / WebTable
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
-from time import *
+import time
 
 # BrowserDriverPaths
 chromeDriverPath= "C:\\Users\\chaitanya.mohammad\\PycharmProjects\\Python_Selenium_BrowserDrivers\\chromedriver.exe"
@@ -24,7 +26,7 @@ print("Product"+"   "+"Article"+"  "+"Price")
 
 for r in range(2, rows+1):
      for c in range(1, cols+1):
-          value= driver.find_elements_by_xpath("/html/body/table/tbody/tr["+str(r)+"]/td["+str(c)+"]").text
+          value= driver.find_element_by_xpath("/html/body/table/tbody/tr["+str(r)+"]/td["+str(c)+"]").text
           print(value, end='  ')
      print()
 

@@ -16,6 +16,6 @@ driver.get(appURL)
 
 driver.find_element_by_xpath("//*[@id='HTML9']/div[1]/button").click()
 driver.switch_to.alert().accept()  # closes alert window using OK button
-#driver.switch_to_alert.dismiss() # closes alert window using cancel button
+#driver.switch_to.alert.dismiss() # closes alert window using cancel button
 
 driver.quit()

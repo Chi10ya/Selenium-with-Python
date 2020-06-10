@@ -1,3 +1,5 @@
+# 14: How to handle browser windows / Switch between windows ==> driver.current_window, driver.window_handles
+
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from time import *

@@ -1,6 +1,6 @@
 # Tutorials
-
-# 3: Basic methods: driver.title, driver.current_url, driver.close(), driver.quit()
+# 2: How to Run tests on Chrome, Fireforx & IE browsers
+# 3: WebDriver commands: Basic methods: driver.title, driver.current_url, driver.close(), driver.quit()
 # 4: Navigational commands: driver.back(), driver.forward()
 # 5: Conditional Commands is_displayed, is_enabled, is_selected
 # 6 & 7: Waits : Implicit Wait, Explicit Wait. Implicit wait is on time based. Explicit wait is on condition not on time. It should be applied on the element which is taking time
@@ -21,6 +21,9 @@
 # 18                                       actions.double_click(element).perform()
 # 19                                       actions.context_click(element).perform()
 # 20                                       actions.drag_and_drop(sourceElement, targetElement).perform()
+# 21: How to upload a file.
+# 22: How to download files using Chrome browser
+
 
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
@@ -54,11 +57,11 @@ print(driver.current_url)
 
 # This button resides in demoAppURL application
 # xPath of the button //*[@class='btn btn-info'] or "//*[@id='Tabbed']/a/button"
-#driver.find_element_by_xpath("//*[@class='btn btn-info']").click()    # This button resides in demoAppURL application
+# driver.find_element_by_xpath("//*[@class='btn btn-info']").click()    # This button resides in demoAppURL application
 
 # The below code is for Flight Demo Application
 
-userName= driver.find_element_by_name("userName")
+userName = driver.find_element_by_name("userName")
 print("Is Username Editbox Displayed", userName.is_displayed())
 print("Is Username Editbox Enabled", userName.is_enabled())
 
@@ -81,8 +84,8 @@ print("Is radio button Oneway Selected", rbtnOneWayTrip.is_selected())
 # driver.back() ==> driver.back() is not functioning. Instead use the below code.
 driver.execute_script("window.history.go(-1)")
 
-#driver.forward()
 
+# driver.forward()
 
 # driver.close()    # It closes only the currently focused browser window
 driver.quit()       # It closes all the browser windows

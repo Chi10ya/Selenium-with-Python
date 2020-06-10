@@ -3,6 +3,8 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC     # this has to be used for Explict wait
 from selenium.webdriver.support.ui import WebDriverWait     # this has to be used for Explicit wait
 
+# 6 & 7: Waits : Implicit Wait, Explicit Wait. Implicit wait is on time based. Explicit wait is on condition not on time. It should be applied on the element which is taking time
+
 # BrowserDriverPaths
 chromeDriverPath= "C:\\Users\\chaitanya.mohammad\\PycharmProjects\\Python_Selenium_BrowserDrivers\\chromedriver.exe"
 # fireFoxDriverPath= "C:\\Users\\chaitanya.mohammad\\PycharmProjects\\Python_Selenium_BrowserDrivers\\geckodriver.exe"
@@ -29,9 +31,9 @@ driver.find_element(By.ID, "flight-returning-hp-flight").send_keys("24/07/2020")
 driver.find_element(By.XPATH, "//*[@id='gcw-flights-form-hp-flight']/div[8]/label/button").click()
 
 # The below two lines are for Explicitly wait
-expliWait= WebDriverWait(driver, 10)
-element= expliWait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='stopFilter_stops-0']")))
-element.click()
+expliWait = WebDriverWait(driver, 10)
+nonStopelement = expliWait.until(EC.element_to_be_clickable((By.XPATH, "//*[@id='stopFilter_stops-0']")))
+nonStopelement.click()
 
 driver.quit()
 
